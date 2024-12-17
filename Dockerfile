@@ -13,8 +13,8 @@ RUN npm install
 # Copia o restante do código do projeto para dentro do container
 COPY . .
 
-# Expõe a porta padrão do React (3000)
-EXPOSE 3000
+# Expõe a porta padrão do Vite (5173)
+EXPOSE 5173
 
-# Comando para iniciar o servidor React
-CMD ["npm", "start"]
+# Comando para iniciar o servidor Vite com --host
+CMD ["npm", "run", "dev", "--", "--host"]
